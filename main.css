@@ -1,58 +1,103 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: Robot, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-.container {
-    margin: 50px auto;
-    max-width: 640px;
-    width: 100%;
-    border: solid;
-    text-align: center;
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(#141e30, #243b55) ;
+}
+
+.cadastro-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
-    
 }
 
-.container h1 {
+.cadastro-box h2 {
+    margin: 0 0 30px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.cadastro-box .entrada {
+    position: relative;
+}
+
+.cadastro-box .entrada input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: whitesmoke;
     margin-bottom: 30px;
-    padding: 15px;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    outline: none;
+    background: transparent;
 }
 
-.container form  input, button{
-    height: 30px;
-    margin-bottom: 10px;
+.cadastro-box .entrada label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: whitesmoke;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.cadastro-box .entrada input:focus ~ label,
+.cadastro-box .entrada input:valid ~ label {
+top: -20px;
+left: 0;
+color: #03e9f4;
+font-size: 12px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
 button {
-    background-color: green;
-    color: whitesmoke;
-    border: none;
-    width: 100px;
+    color: #03e9f4;
+    padding: 10px 20px;
+    font-size: 16px;
     text-transform: uppercase;
-    font-weight: bold;
+    text-decoration: none;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    background: none;
+    border: 1px solid #03e9f4;
     cursor: pointer;
+
 }
 
-.tarefa {
-    cursor: pointer;
-    background-color: azure;
+#botao {
+display: flex;
+justify-content: center;
 }
 
-ul li {
-    list-style-type: none;
-    padding-bottom: 10px;
-    padding-top: 10px;
+button:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow:  0 0 5px #03e9f4,
+                 0 0 25px #03e9f4,
+                 0 0 50px #03e9f4,
+                 0 0 100px #03e9f4;
 }
 
-form {
-    border-bottom: solid 0.7px rgba(0, 0, 0, 0.7);
-}
-
-/*text-decoration: line-through;   list-style-type: none;
-
-//     $('ul').on('click', '.tarefa', function() {
-        // Ação a ser executada quando a div for clicada
-        $(this).css('text-decoration', 'none')
-    })
